@@ -30,19 +30,10 @@ export function showHomeView() {
 }
 
 /**
- * Displays the Courses View.
- */
-export function showCoursesView() {
-  hideAllViews();
-  document.getElementById('coursesView')?.classList.remove('hidden');
-}
-
-/**
  * Hides all views.
  */
 function hideAllViews() {
   document.getElementById('usersView')?.classList.add('hidden');
-  document.getElementById('coursesView')?.classList.add('hidden');
   document.getElementById('homeView')?.classList.add('hidden');
 }
 
@@ -66,9 +57,8 @@ function initAdminButtons() {
 
   // "Add New Student" button logic
   addBtn.onclick = () => {
-    console.log('Clicked add');
     clearForm();
-    document.getElementById('modalTitle').textContent = 'Add New Student';
+    document.getElementById('modalTitle').textContent = 'Create Event';
     openModal();
   };
 
@@ -79,13 +69,13 @@ function initAdminButtons() {
   tbody.onclick = async (e) => {
     const id = e.target.dataset.id;
 
-    // Edit action
+    // Edit action  
     if (e.target.classList.contains('edit-btn')) {
       const users = await getUsers();
       const selected = users.find(u => u.id == id);
       if (selected) {
         fillForm(selected);
-        document.getElementById('modalTitle').textContent = 'Edit Student';
+        document.getElementById('modalTitle').textContent = 'Edit Event';
         openModal();
       }
     }
@@ -105,11 +95,10 @@ function initAdminButtons() {
     e.preventDefault();
 
     const userData = {
-      name: document.getElementById('name').value.trim(),
-      email: document.getElementById('email').value.trim(),
-      phone: document.getElementById('phone').value.trim(),
-      enrollNumber: document.getElementById('enrollNumber').value.trim(),
-      dateOfAdmission: document.getElementById('dateOfAdmission').value
+        name: document.getElementById('name').value,
+        description: document.getElementById('description').value,
+        capacity: document.getElementById('capacity').value,
+        dateOfAdmission: document.getElementById('dateOfAdmission').value
     };
 
     const id = document.getElementById('userId').value;

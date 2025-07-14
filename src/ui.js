@@ -20,11 +20,10 @@ export async function renderUserTable() {
     const row = document.createElement('tr');
 
     row.innerHTML = `
-      <td><img src="./assets/img/avatar.png" class="avatar"></td>
+      <td><img src="../assets/imgs/events.jpg" class="avatar"></td>
       <td>${user.name}</td>
-      <td>${user.email}</td>
-      <td>${user.phone}</td>
-      <td>${user.enrollNumber}</td>
+      <td>${user.description}</td>
+      <td>${user.capacity}</td>
       <td>${user.dateOfAdmission}</td>
       <td>
         ${isAdmin ? `

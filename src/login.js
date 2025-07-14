@@ -30,28 +30,29 @@ export async function login(email, password) {
  * @param {Object} newUser - New user data
  * @returns {Promise<Object|null>} Created user or null if email already exists
  */
+
 export async function register(newUser) {
-  const existingRes = await fetch(`${API_URL}?email=${newUser.email}`);
+  // Normaliza el email
+  const email = newUser.email.trim().toLowerCase();
+  const existingRes = await fetch(`${API_URL}?email=${email}`);
   const existing = await existingRes.json();
 
-  // Prevent duplicate email registration
   if (existing.length > 0) return null;
 
+  // Guarda el email normalizado
   const res = await fetch(API_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(newUser)
+    body: JSON.stringify({ ...newUser, email })
   });
 
   const created = await res.json();
 
-  // Automatically log in the user after registration
   localStorage.setItem('Auth', 'true');
   localStorage.setItem('user', JSON.stringify(created));
 
   return created;
 }
-
 /**
  * Logs out the current user and reloads the page.
  */

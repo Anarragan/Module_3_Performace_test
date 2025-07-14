@@ -3,11 +3,21 @@
     {
       "id": "2356",
       "name": "pepe",
+      "description": "lorem",
+      "capacity": "12",
       "email": "pepe@example.com",
       "password": "1234",
       "role": "admin",
-      "phone": "",
-      "enrollNumber": "",
+      "dateOfAdmission": "2025-07-14"
+    },
+    {
+      "id": "2311",
+      "name": "Ana",
+      "description": "lorem",
+      "capacity": "12",
+      "email": "ana@example.com",
+      "password": "1234",
+      "role": "user",
       "dateOfAdmission": "2025-07-14"
     }
   ]

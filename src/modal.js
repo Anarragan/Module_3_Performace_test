@@ -24,9 +24,8 @@ export function fillForm(user) {
   console.log("Filling form with:", user);
   document.getElementById('userId').value = user.id;
   document.getElementById('name').value = user.name;
-  document.getElementById('email').value = user.email;
-  document.getElementById('phone').value = user.phone;
-  document.getElementById('enrollNumber').value = user.enrollNumber;
+  document.getElementById('description').value = user.description;
+  document.getElementById('capacity').value = user.capacity;
   document.getElementById('dateOfAdmission').value = user.dateOfAdmission;
 }
 
@@ -36,8 +35,7 @@ export function fillForm(user) {
 export function clearForm() {
   document.getElementById('userId').value = '';
   document.getElementById('name').value = '';
-  document.getElementById('email').value = '';
-  document.getElementById('phone').value = '';
-  document.getElementById('enrollNumber').value = '';
-  document.getElementById('dateOfAdmission').value = '';
+  document.getElementById('description').value = '';
+  document.getElementById('capacity').value = '';
+  document.getElementById('dateOfAdmission').value ='';
 }

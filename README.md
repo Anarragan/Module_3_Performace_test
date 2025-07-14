@@ -1,18 +1,18 @@
-# 🎓 Student & Course Management SPA
+# 🎓 Event management
 
 A lightweight **Single Page Application (SPA)** built with **HTML, CSS, and Vanilla JavaScript**, powered by **Vite** for local development and **JSON Server** as a mock backend.
 
 ---
 
-## 🚀 Features
+## Features
 
-- 🔐 Login and registration with local storage
-- 👤 Admin panel for managing students (add, edit, delete)
-- 📚 Course view (base setup for expansion)
-- 🧩 Role-based view rendering (admin vs. student)
-- 💻 Fully responsive layout
-- ⚡ Fast dev server with [Vite](https://vitejs.dev/)
-- 🔄 Fake REST API via [JSON Server](https://github.com/typicode/json-server)
+-  Login and registration with local storage
+-  Admin panel for managing events (add, edit, delete)
+-  Course view (base setup for expansion)
+-  Role-based view rendering (admin vs. user)
+-  Fully responsive layout
+-  Fast dev server with [Vite](https://vitejs.dev/)
+-  Fake REST API via [JSON Server](https://github.com/typicode/json-server)
 
 ---
 
@@ -26,11 +26,6 @@ A lightweight **Single Page Application (SPA)** built with **HTML, CSS, and Vani
 | **Vite**     | Frontend dev server / bundler   |
 | **JSON Server** | Mock backend API             |
 
----
-
-## 🌐 What is a SPA?
-
-A **Single Page Application** dynamically updates the current page rather than loading a new one from the server. This makes interactions faster and smoother, ideal for user-driven platforms like dashboards.
 
 ---
 
@@ -39,18 +34,20 @@ A **Single Page Application** dynamically updates the current page rather than l
 ```
 project-root/
 ├── index.html
-├── stiles.css
-├── main.js
-├── login.js
-├── modal.js
-├── ui.js
-├── validate.js
-├── api.js
-├── apiCourses.js
+├── package-lock.json
 ├── assets/
 │   ├── views.js
 │   └── img/
 │       └── avatar.png
+├── css/
+│   ├──style.css
+├── src/
+│   ├──api.js
+│   ├──login.js
+│   ├──main.js
+│   ├──modal.js
+│   ├──ui.js
+│   ├──validate.js
 ├── db.json
 └── package.json
 ```
@@ -102,17 +99,6 @@ Make sure your `package.json` includes:
 }
 ```
 
-### 5. Create the `db.json` File
-
-```json
-{
-  "users": [],
-  "courses": []
-}
-```
-
-You can seed it manually or via the app.
-
 ---
 
 ## ▶️ Running the App
@@ -120,10 +106,10 @@ You can seed it manually or via the app.
 ### 1. Start the Mock API Server
 
 ```bash
-npm run server
+json-server --watch db.json --port 3001
 ```
 
-This will start JSON Server at [http://localhost:3000](http://localhost:3000)
+This will start JSON Server at [http://localhost:3001](http://localhost:3001)
 
 ### 2. Start the Frontend Dev Server
 
@@ -138,6 +124,8 @@ Visit the app at: [http://localhost:5173](http://localhost:5173)
 ---
 
 ## 🧪 Default Admin User (Example)
+
+> 📦 Note: if you enter as an administrator you must do ctrl+s on the modal.js tab so that the buttons activate their functionalities (to improve :c).
 
 Add to `db.json`:
 
@@ -161,22 +149,20 @@ Password: 1234
 ```
 
 ---
-
 ## ✅ To Do / Improvements
 
-- [ ] Add course CRUD interface
-- [ ] Improve validation (email format, strong passwords)
-- [ ] Use tokens or sessions instead of localStorage
+- [ ] fix modal loading issue
+- [ ] fix registration form information
 - [ ] Add search, filter and pagination
 
 ---
 
-## 📄 License
+##  License
 
 MIT License – free to use, share and improve.
 
 ---
 
-## 💬 Feedback or Contributions?
+## Feedback or Contributions?
 
 Feel free to fork the repo, open issues or submit pull requests 🤝

@@ -4,7 +4,7 @@ import { renderUserTable } from './ui.js';
 import { getUsers, addUser, updateUser, deleteUser } from './api.js';
 import { openModal, closeModal, fillForm, clearForm } from './modal.js';
 import { validateForm } from './validate.js';
-import { showUsersView, showCoursesView, showHomeView } from '../assets/views.js';
+import { showUsersView, showHomeView } from '../assets/views.js';
 
 // ===== App Initialization =====
 document.addEventListener('DOMContentLoaded', () => {
@@ -63,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('loginError').textContent = 'Incorrect credentials';
     }
   });
-
   // ==== Register Form Submission ====
   document.getElementById('registerForm').addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -72,15 +71,15 @@ document.addEventListener('DOMContentLoaded', () => {
       email: document.getElementById('registerEmail').value.trim(),
       password: document.getElementById('registerPassword').value.trim(),
       role: document.getElementById('registerRole').value,
-      phone: '',
-      enrollNumber: '',
       dateOfAdmission: new Date().toISOString().slice(0, 10)
     };
 
     const registered = await register(newUser);
     if (registered) {
+      console.log('User registered:', registered);
       location.reload(); // Refresh app
     } else {
+      console.log(registered)
       document.getElementById('loginError').textContent = 'User already exists';
     }
   });
@@ -153,10 +152,9 @@ function setupAdminButtons() {
       e.preventDefault();
 
       const userData = {
-        name: document.getElementById('name').value.trim(),
-        email: document.getElementById('email').value.trim(),
-        phone: document.getElementById('phone').value.trim(),
-        enrollNumber: document.getElementById('enrollNumber').value.trim(),
+        name: document.getElementById('name').value,
+        description: document.getElementById('description').value,
+        capacity: document.getElementById('capacity').value,
         dateOfAdmission: document.getElementById('dateOfAdmission').value
       };
 
