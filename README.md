@@ -2,10 +2,10 @@
 
 A lightweight **Single Page Application (SPA)** built with **HTML, CSS, and Vanilla JavaScript**, powered by **Vite** for local development and **JSON Server** as a mock backend.
 
-# Name: Ana Maria Barragan Ariza
-# Clan: Gosling
-# Email: anmabaar2002@gmail.com
-# ID: 1006457424
+- Name: Ana Maria Barragan Ariza
+- Clan: Gosling
+- Email: anmabaar2002@gmail.com
+- ID: 1006457424
 
 ---
 
