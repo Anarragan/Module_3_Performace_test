@@ -1,3 +1,4 @@
+
 // ===== Import Dependencies =====
 import { getCurrentUser, login, register, logout } from './login.js';
 import { renderUserTable } from './ui.js';
