@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CRUD OPERATIONS</title>
+  <title>Events</title>
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
@@ -35,7 +35,7 @@
 </div>
   <!-- Sidebar -->
   <aside class="sidebar hidden">
-    <h2>CRUD OPERATIONS</h2>
+    <h2>EVENTS</h2>
     <div class="profile">
       <img src="assets/img/avatar.png" alt="Admin Photo" />
       <p class="name">Random guy</p>
@@ -43,12 +43,11 @@
     </div>
 
     <nav class="menu">
-    <a href="#" class="menu-item active" data-view="home">🏠 Home</a>
-    <a href="#" class="menu-item" data-view="courses">📑 Course</a>
-    <a href="#" class="menu-item" data-view="users">🎓 Users</a>
+    <a href="#" class="menu-item active" data-view="home">Home</a>
+    <a href="#" class="menu-item" data-view="users">Users</a>
     </nav>
   
-    <a href="#" id="logoutBtn" class="logout">Logout ⤴️</a>
+    <a href="#" id="logoutBtn" class="logout">Logout</a>
   </aside>
 
   <!-- Main content -->
@@ -57,13 +56,9 @@
   <!-- Home View -->
   <section id="homeView">
     <h1>Bienvenida/o</h1>
-    <p>Este es el panel de inicio de tu aplicación.</p>
+    <p>Pagina principal home</p>
   </section>
 
-  <!-- Courses View -->
-  <section id="coursesView" class="hidden">
-  <!-- Se llenará dinámicamente con JS -->
-</section>
 
   <!-- Users View (CRUD de estudiantes) -->
   <section id="usersView" class="hidden">
@@ -71,7 +66,7 @@
       <h1>Students List</h1>
       <div class="header-actions">
         <input type="search" placeholder="Search..." />
-        <button class="add-btn" id="addBtn">ADD NEW STUDENT</button>
+        <button class="add-btn" id="addBtn">ADD NEW EVENT</button>
       </div>
     </header>
 
@@ -100,7 +95,7 @@
   <div id="userModal" class="modal">
     <div class="modal-content">
       <span class="close-modal" id="closeModalBtn">&times;</span>
-      <h2 id="modalTitle">Add New Student</h2>
+      <h2 id="modalTitle">Create Event</h2>
       <form id="userForm">
         <input type="hidden" id="userId" />
         <div class="form-group">

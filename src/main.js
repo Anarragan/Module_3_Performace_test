@@ -110,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
       activateMenu(view);
 
       if (view === 'home') showHomeView();
-      else if (view === 'courses') showCoursesView();
       else if (view === 'users') showUsersView();
     });
   });

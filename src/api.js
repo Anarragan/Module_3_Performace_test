@@ -1,6 +1,5 @@
 // ===== Base API URL =====
-const API_URL = 'http://localhost:3000/users';
-
+const API_URL = 'http://localhost:3001/users';
 /**
  * Fetches all users from the API.
  * @returns {Promise<Array>} Array of user objects
@@ -15,10 +14,12 @@ export async function getUsers() {
  * @param {Object} user - New user data
  * @returns {Promise<Object>} Created user object
  */
+
+
 export async function addUser(user) {
   const res = await fetch(API_URL, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json'},
     body: JSON.stringify(user)
   });
   return res.json(); // Return the created user

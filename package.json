@@ -12,7 +12,6 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^9.2.0",
-    "json-server": "^1.0.0-beta.3",
     "vite": "^7.0.4"
   },
   "dependencies": {
@@ -24,6 +23,7 @@
     "color-convert": "^2.0.1",
     "color-name": "^1.1.4",
     "colorette": "^2.0.20",
+    "cors": "^2.8.5",
     "dayjs": "^1.11.13",
     "dot-prop": "^9.0.0",
     "emoji-regex": "^8.0.0",
@@ -39,6 +39,7 @@
     "inflection": "^3.0.2",
     "ipaddr.js": "^2.2.0",
     "is-fullwidth-code-point": "^3.0.0",
+    "json-server": "^1.0.0-beta.3",
     "json5": "^2.2.3",
     "lodash": "^4.17.21",
     "lowdb": "^7.0.1",

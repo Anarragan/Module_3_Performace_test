@@ -1,5 +1,5 @@
 // ===== Login API & Auth Logic =====
-const API_URL = 'http://localhost:3000/users';
+const API_URL = 'http://localhost:3001/users';
 
 /**
  * Attempts to log in a user with the given credentials.
@@ -8,6 +8,7 @@ const API_URL = 'http://localhost:3000/users';
  * @returns {Promise<Object|null>} Authenticated user or null if failed
  */
 export async function login(email, password) {
+  
   const res = await fetch(`${API_URL}?email=${email}`);
   const users = await res.json();
 
