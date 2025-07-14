@@ -1,6 +1,11 @@
-# 🎓 Event management
+# Event management
 
 A lightweight **Single Page Application (SPA)** built with **HTML, CSS, and Vanilla JavaScript**, powered by **Vite** for local development and **JSON Server** as a mock backend.
+
+# Name: Ana Maria Barragan Ariza
+# Clan: Gosling
+# Email: anmabaar2002@gmail.com
+# ID: 1006457424
 
 ---
 
@@ -16,7 +21,7 @@ A lightweight **Single Page Application (SPA)** built with **HTML, CSS, and Vani
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Tool         | Purpose                         |
 |--------------|---------------------------------|
@@ -29,7 +34,7 @@ A lightweight **Single Page Application (SPA)** built with **HTML, CSS, and Vani
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 project-root/
@@ -54,13 +59,13 @@ project-root/
 
 ---
 
-## 🧰 Installation Guide
+##  Installation Guide
 
-> 📦 Note: `node_modules` is not included in the repository.  
+>  Note: `node_modules` is not included in the repository.  
 After cloning the project, run `npm install` to install all required dependencies.
 
 
-> ✨ If you don't have Vite or JSON Server installed, follow the steps below.
+>  If you don't have Vite or JSON Server installed, follow the steps below.
 
 ### 1. Clone the Repo
 
@@ -101,7 +106,7 @@ Make sure your `package.json` includes:
 
 ---
 
-## ▶️ Running the App
+##  Running the App
 
 ### 1. Start the Mock API Server
 
@@ -123,9 +128,9 @@ Visit the app at: [http://localhost:5173](http://localhost:5173)
 
 ---
 
-## 🧪 Default Admin User (Example)
+##  Default Admin User (Example)
 
-> 📦 Note: if you enter as an administrator you must do ctrl+s on the modal.js tab so that the buttons activate their functionalities (to improve :c).
+>  Note: if you enter as an administrator you must do ctrl+s on the modal.js tab so that the buttons activate their functionalities (to improve :c).
 
 Add to `db.json`:
 
@@ -149,7 +154,7 @@ Password: 1234
 ```
 
 ---
-## ✅ To Do / Improvements
+##  To Do / Improvements
 
 - [ ] fix modal loading issue
 - [ ] fix registration form information
