@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CRUD OPERATIONS</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <div id="loginSection" class="login-screen">
+  <h2>Iniciar sesión o registrarse</h2>
+  <form id="loginForm">
+    <input type="email" id="loginEmail" placeholder="Correo electrónico" required />
+    <input type="password" id="loginPassword" placeholder="Contraseña" required />
+    <button type="submit">Ingresar</button>
+    <p>¿No tienes cuenta? <a href="#" id="showRegister">Regístrate</a></p>
+
+  </form>
+
+  <form id="registerForm" class="hidden">
+    <h3>¿No tienes cuenta? Regístrate</h3>
+    <input type="text" id="registerName" placeholder="Nombre" required />
+    <input type="email" id="registerEmail" placeholder="Correo electrónico" required />
+    <input type="password" id="registerPassword" placeholder="Contraseña" required />
+    <select id="registerRole" required>
+      <option value="" disabled selected>Selecciona rol</option>
+      <option value="user">Usuario</option>
+      <option value="admin">Administrador</option>
+    </select>
+    <button type="submit">Registrarse</button>
+    <p>¿Ya tienes cuenta? <a href="#" id="showLogin">Iniciar sesión</a></p>
+  </form>
+
+  <p id="loginError" class="error-message"></p>
+</div>
+  <!-- Sidebar -->
+  <aside class="sidebar hidden">
+    <h2>CRUD OPERATIONS</h2>
+    <div class="profile">
+      <img src="assets/img/avatar.png" alt="Admin Photo" />
+      <p class="name">Random guy</p>
+      <p class="role">Admin</p>
+    </div>
+
+    <nav class="menu">
+    <a href="#" class="menu-item active" data-view="home">🏠 Home</a>
+    <a href="#" class="menu-item" data-view="courses">📑 Course</a>
+    <a href="#" class="menu-item" data-view="users">🎓 Users</a>
+    </nav>
+  
+    <a href="#" id="logoutBtn" class="logout">Logout ⤴️</a>
+  </aside>
+
+  <!-- Main content -->
+  <main id="mainContent" class="main-content hidden">
+
+  <!-- Home View -->
+  <section id="homeView">
+    <h1>Bienvenida/o</h1>
+    <p>Este es el panel de inicio de tu aplicación.</p>
+  </section>
+
+  <!-- Courses View -->
+  <section id="coursesView" class="hidden">
+  <!-- Se llenará dinámicamente con JS -->
+</section>
+
+  <!-- Users View (CRUD de estudiantes) -->
+  <section id="usersView" class="hidden">
+    <header class="top-header">
+      <h1>Students List</h1>
+      <div class="header-actions">
+        <input type="search" placeholder="Search..." />
+        <button class="add-btn" id="addBtn">ADD NEW STUDENT</button>
+      </div>
+    </header>
+
+    <section class="table-section">
+      <table class="user-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Enroll Number</th>
+            <th>Date of admission</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="userTableBody">
+          <!-- Filas dinámicas con JS -->
+        </tbody>
+      </table>
+    </section>
+  </section>
+</main>
+
+  <!-- Modal (hidden by default) -->
+  <div id="userModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeModalBtn">&times;</span>
+      <h2 id="modalTitle">Add New Student</h2>
+      <form id="userForm">
+        <input type="hidden" id="userId" />
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="text" id="phone" required />
+        </div>
+        <div class="form-group">
+          <label for="enrollNumber">Enroll Number</label>
+          <input type="text" id="enrollNumber" required />
+        </div>
+        <div class="form-group">
+          <label for="dateOfAdmission">Date of Admission</label>
+          <input type="date" id="dateOfAdmission" required />
+        </div>
+        <button type="submit" class="submit-btn">Save</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

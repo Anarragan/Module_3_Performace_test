@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "name": "Ana",
+      "email": "ana@example.com",
+      "phone": "3001234568",
+      "enrollNumber": "A12345",
+      "dateOfAdmission": "2024-01-01",
+      "id": "1"
+    },
+    {
+      "id": "8eb3",
+      "name": "raul",
+      "email": "raul@example.com",
+      "password": "1234",
+      "role": "user",
+      "phone": "",
+      "enrollNumber": "",
+      "dateOfAdmission": "2025-07-14"
+    },
+    {
+      "id": "0948",
+      "name": "ana",
+      "email": "anbarragana@unal.edu.co",
+      "password": "1234",
+      "role": "admin",
+      "phone": "",
+      "enrollNumber": "",
+      "dateOfAdmission": "2025-07-14"
+    }
+  ],
+  "courses": [
+    {
+      "id": "1",
+      "title": "Fundamentos de Programación",
+      "description": "Aprende los conceptos básicos de lógica y sintaxis."
+    },
+    {
+      "id": "2",
+      "title": "Bases de Datos",
+      "description": "Modelado, consultas y normalización."
+    }
+  ]
+}
